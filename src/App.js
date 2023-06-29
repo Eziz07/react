@@ -1,5 +1,6 @@
 import React from 'react';
 import Expenses from './components/Expenses/Expenses';
+import NewExpense from './components/NewExpense/NewExpense';
 
 const App = () => {
   const expenses = [
@@ -9,10 +10,15 @@ const App = () => {
     {title: "Desktop Monitor", amount: 599.99, date: new Date(2020, 2, 11)},
   ]
 
+  const addExpenseData = (expense) => {
+    console.log("in app.js");
+    console.log(expenses);
+  }
+
   return (
     <div>
       <h2 style={{textAlign: 'center'}}>Let's get started!</h2>
-     
+      <NewExpense onAddExpense={addExpenseData} />
       <Expenses items={expenses}/>
     </div>
   );
