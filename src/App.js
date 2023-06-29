@@ -12,12 +12,12 @@ const App = () => {
 
   const addExpenseData = (expense) => {
     console.log("in app.js");
-    console.log(expenses);
+    console.log(expense);
   }
 
   return (
     <div>
-      <h2 style={{textAlign: 'center'}}>Let's get started!</h2>
+      {/* <h2 style={{textAlign: 'center'}}>Let's get started!</h2> */}
       <NewExpense onAddExpense={addExpenseData} />
       <Expenses items={expenses}/>
     </div>
